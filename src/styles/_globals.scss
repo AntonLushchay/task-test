@@ -1,0 +1,9 @@
+@use 'helpers' as *;
+
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+	font-family: var(--font-family-base);
+	font-weight: 400;
+	color: var(--main-text-color);
+}

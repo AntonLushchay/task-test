@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 100 900;
+	src:
+		url('/fonts/PlayfairDisplay-VariableFont_wght.woff2') format('woff2'),
+		url('/fonts/PlayfairDisplay-VariableFont_wght.woff') format('woff'),
+		url('/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100 900;
+	src:
+		url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2'),
+		url('/fonts/Inter-VariableFont_opsz,wght.woff') format('woff'),
+		url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+	font-display: swap;
+}

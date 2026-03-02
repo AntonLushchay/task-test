@@ -1,0 +1,112 @@
+@use '../helpers' as *;
+
+.hero {
+	@include flex-center;
+
+	gap: fluid-h(200, 48);
+	height: fluid-h(780, 540);
+	background-color: var(--main-background-color);
+
+	@include tablet-and-less {
+		flex-direction: column;
+		gap: fluid-v(50, 35);
+		height: rem(863.5);
+		padding-block-start: fluid-v(65, 50);
+	}
+
+	@include mobile-and-less {
+		height: rem(881);
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: fluid-h(20, 8);
+		width: fluid-h(474, 323);
+		height: fluid-h(386, 316);
+
+		@include tablet-and-less {
+			gap: rem(10);
+			align-items: center;
+			width: fluid-v(438, 371);
+			height: auto;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		font-family: var(--font-family-accent);
+		font-size: fluid-h(60, 47);
+		font-weight: 600;
+		line-height: fluid-h(68, 55);
+		letter-spacing: fluid-h(0.3, -2);
+
+		@include small-laptop-and-less {
+			font-weight: 400;
+		}
+
+		@include tablet-and-less {
+			width: fluid-v(438, 351);
+			margin-block-end: 0;
+			font-size: fluid-v(47, 34);
+			line-height: fluid-v(55, 37);
+		}
+	}
+
+	&__subtitle {
+		font-size: fluid-h(18, 16);
+		line-height: fluid-h(26, 23);
+
+		@include tablet-and-less {
+			width: fluid-v(413, 283);
+			font-size: fluid-v(16, 14);
+			line-height: fluid-v(23, 20);
+		}
+	}
+
+	&__button {
+		width: rem(176);
+		height: rem(44);
+		margin-block-start: rem(18);
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: rem(16);
+		color: var(--button-text-color);
+		cursor: pointer;
+		background-color: var(--button-bg-color);
+		border: none;
+		border-radius: rem(200);
+		box-shadow: 0 rem(4) rem(12) rgb(0 66 228 / 15%);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			background-color: #003ab8;
+			box-shadow: 0 rem(6) rem(16) rgb(0 66 228 / 25%);
+			transform: translateY(rem(-2));
+		}
+
+		&:active,
+		&:focus {
+			outline: rem(2) solid rgb(0 66 228 / 30%);
+			outline-offset: rem(2);
+			background-color: #002885;
+			box-shadow: 0 rem(2) rem(8) rgb(0 66 228 / 20%);
+			transform: translateY(0);
+		}
+
+		@include tablet-and-less {
+			width: clamp(9rem, calc(176px + (320 - 144) * ((100vw - 768px) / (375 - 768))), 20rem);
+			margin-block-start: fluid-v(17, 11);
+			font-size: fluid-v(16, 14);
+		}
+
+		@include mobile-and-less {
+			margin-block-start: rem(14);
+		}
+	}
+
+	&__swiper {
+		width: fluid-h(899, 558);
+		height: 100%;
+	}
+}

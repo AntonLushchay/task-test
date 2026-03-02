@@ -1,0 +1,87 @@
+@use '../helpers' as *;
+
+.footer {
+	&.brands {
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		height: fluid-h(190, 90);
+		padding-top: fluid-h(70, 30);
+		overflow: hidden;
+		background-color: var(--secondary-background-color);
+
+		@include tablet-and-less {
+			height: rem(104);
+			padding-top: rem(36);
+		}
+
+		@include mobile-and-less {
+			height: rem(117);
+			padding-top: rem(35);
+		}
+	}
+}
+
+.brands {
+	&__container {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__track {
+		display: flex;
+		gap: fluid(125, 50);
+		align-items: center;
+		justify-content: center;
+		animation: scroll 30s linear infinite;
+
+		@include tablet-and-less {
+			animation-duration: 20s;
+		}
+
+		@include mobile-and-less {
+			animation-duration: 15s;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		min-width: auto;
+		height: auto;
+
+		@include tablet-and-less {
+			min-width: auto;
+			height: auto;
+		}
+
+		@include mobile-and-less {
+			min-width: auto;
+			height: auto;
+		}
+	}
+
+	&__logo {
+		width: auto;
+		height: fluid-h(31, 21);
+		object-fit: contain;
+		opacity: 0.7;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(50%);
+	}
+}

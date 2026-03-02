@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.header {
+	display: flex;
+	align-items: center;
+	height: rem(76);
+	background-color: var(--main-background-color);
+	border-bottom: rem(1) solid #ebebeb;
+
+	&__logo-container {
+		width: rem(110);
+		height: rem(30);
+		margin-left: rem(30);
+	}
+}
