@@ -3,7 +3,7 @@ import path from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	base: '/votpo-test/',
+	base: '/task-test/',
 	css: {
 		devSourcemap: true,
 	},
